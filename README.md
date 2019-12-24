@@ -25,7 +25,7 @@
 
 ### Building
    ```sh
-      $ git clone <>
+      $ git clone https://github.com/gokultp/alien-invasion.git
       $ cd alien-invasion
       $ make build
    ```
@@ -60,6 +60,6 @@ Usage of ./build/alien-invantion:
         use --output=<file path> to specify map output file (default "./out.txt")
 ```
 
-here input and output files also can be set with params.
+here input and output files also can be set with command flags.
 
 

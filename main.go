@@ -4,7 +4,7 @@ import (
 	"flag"
 	"os"
 
-	"github.com/gokultp/aliegn-invasion/pkg"
+	"github.com/gokultp/alien-invasion/pkg"
 )
 
 func main() {
