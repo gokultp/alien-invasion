@@ -1,0 +1,2 @@
+Bar west=Bee
+Bee east=Bar
