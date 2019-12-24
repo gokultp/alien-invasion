@@ -144,7 +144,7 @@ func TestCity_Free(t *testing.T) {
 			name: "should get free if invoked",
 			c: &City{
 				alienAcquired: &alien1,
-				lock:         &sync.Mutex{},
+				lock:          &sync.Mutex{},
 			},
 		},
 	}

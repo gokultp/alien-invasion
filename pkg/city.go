@@ -8,13 +8,13 @@ import (
 
 // City encapsulates the neighbour informations of the city
 type City struct {
-	Name         string
-	West         *City
-	East         *City
-	North        *City
-	South        *City
+	Name          string
+	West          *City
+	East          *City
+	North         *City
+	South         *City
 	alienAcquired *int
-	lock         *sync.Mutex
+	lock          *sync.Mutex
 }
 
 // NewCity returns a new instance of the city
@@ -93,7 +93,7 @@ func (c *City) Acquire(alien int) int {
 	return *c.alienAcquired
 }
 
-// Free will unset the aquisition in the city
+// Free will unset the acquisition in the city
 func (c *City) Free() {
 	c.lock.Lock()
 	defer c.lock.Unlock()
