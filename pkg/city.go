@@ -13,7 +13,7 @@ type City struct {
 	East         *City
 	North        *City
 	South        *City
-	alienAquired *int
+	alienAcquired *int
 	lock         *sync.Mutex
 }
 
@@ -81,23 +81,23 @@ func (c *City) Isolate() {
 	}
 }
 
-// Aquire will aquire the city and assign to the given alien if it is free
-// returns the id of alien aquired it first
-func (c *City) Aquire(alien int) int {
+// Acquire will acquire the city and assign to the given alien if it is free
+// returns the id of alien acquired it first
+func (c *City) Acquire(alien int) int {
 	c.lock.Lock()
 	defer c.lock.Unlock()
-	if c.alienAquired == nil {
-		c.alienAquired = &alien
+	if c.alienAcquired == nil {
+		c.alienAcquired = &alien
 		return alien
 	}
-	return *c.alienAquired
+	return *c.alienAcquired
 }
 
 // Free will unset the aquisition in the city
 func (c *City) Free() {
 	c.lock.Lock()
 	defer c.lock.Unlock()
-	c.alienAquired = nil
+	c.alienAcquired = nil
 }
 
 // IsIsolated says wheher the city is isolated or not

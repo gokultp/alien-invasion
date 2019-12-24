@@ -74,7 +74,7 @@ func (i *Invader) InitAliens(count int) {
 	for j := 0; j < count; j++ {
 		c := rand.getRandomElement()
 		selectedCity := i.Cities[c]
-		if val := selectedCity.Aquire(j); val != j {
+		if val := selectedCity.Acquire(j); val != j {
 			i.destroyCity(selectedCity, j, val)
 			rand.removeElement(c)
 			continue
@@ -118,7 +118,7 @@ func (i *Invader) Exec() {
 				next := c.GetRandomNeighbour()
 				if next != nil {
 					c.Free()
-					if val := next.Aquire(a); val != a {
+					if val := next.Acquire(a); val != a {
 						i.destroyCity(next, a, val)
 						return
 					}

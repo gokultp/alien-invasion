@@ -102,7 +102,7 @@ func TestCity_Isolate(t *testing.T) {
 	}
 }
 
-func TestCity_Aquire(t *testing.T) {
+func TestCity_Acquire(t *testing.T) {
 	alien1 := 1
 	tests := []struct {
 		name string
@@ -117,8 +117,8 @@ func TestCity_Aquire(t *testing.T) {
 			want: 1,
 		},
 		{
-			name: "should return the the aquired alien's id if already aquired.",
-			c:    &City{alienAquired: &alien1, lock: &sync.Mutex{}},
+			name: "should return the the acquired alien's id if already acquired.",
+			c:    &City{alienAcquired: &alien1, lock: &sync.Mutex{}},
 			args: 2,
 			want: 1,
 		},
@@ -126,8 +126,8 @@ func TestCity_Aquire(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 
-			if got := tt.c.Aquire(tt.args); got != tt.want {
-				t.Errorf("City.Aquire() = %v, want %v", got, tt.want)
+			if got := tt.c.Acquire(tt.args); got != tt.want {
+				t.Errorf("City.Acquire() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -143,7 +143,7 @@ func TestCity_Free(t *testing.T) {
 		{
 			name: "should get free if invoked",
 			c: &City{
-				alienAquired: &alien1,
+				alienAcquired: &alien1,
 				lock:         &sync.Mutex{},
 			},
 		},
@@ -151,7 +151,7 @@ func TestCity_Free(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			tt.c.Free()
-			if tt.c.alienAquired != nil {
+			if tt.c.alienAcquired != nil {
 				t.Error("city did not get free")
 			}
 		})

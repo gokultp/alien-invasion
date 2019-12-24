@@ -1,5 +1,10 @@
 # Alien Invasion
 
+
+## Overview [![GoDoc](https://godoc.org/github.com/gokultp/alien-invasion?status.svg)](https://godoc.org/github.com/gokultp/alien-invasion) [![Build Status](https://travis-ci.org/gokultp/alien-invasion.svg?branch=master)](https://travis-ci.org/gokultp/alien-invasion) [![Code Climate](https://codeclimate.com/github/gokultp/alien-invasion/badges/gpa.svg)](https://codeclimate.com/github/gokultp/alien-invasion) [![Go Report Card](https://goreportcard.com/badge/github.com/gokultp/alien-invasion)](https://goreportcard.com/report/github.com/gokultp/alien-invasion)
+
+
+
 ## Assumptions taken
 
 1. Input should be of format
