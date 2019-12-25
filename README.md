@@ -43,13 +43,13 @@
 
    ```
       # execute with default params
-      $ cd build && ./alien-invasion
+      $  ./build/alien-invasion
 
       # specifying number of aliens
-      $ ./alien-invasion --aliens=10
+      $ ./build/alien-invasion --aliens=10
 
       # get help on other available params
-      $ ./alien-invasion --help
+      $ ./build/alien-invasion --help
 
    ```
 
